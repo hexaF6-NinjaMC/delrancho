@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Company Announcements{% endblock %}
+
+{% block h1 %}Announcements{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <p>{{ date }}</p>
+
+    {% include 'display-users.html' %}
+{% endblock %}

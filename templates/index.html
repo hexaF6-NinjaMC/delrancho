@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+    {% block title %}Home{% endblock %}
+    {% block content %}The Login App Home page, by hexaF6-NinjaMC.{% endblock %}
+        {% block h1 %}Home{% endblock %}
+
+        {% block main %}
+        {% if current_user.is_authenticated == false %}
+            <h2>Please Log in to Continue</h2>
+        {% else %}
+            <h2>Welcome, {{ current_user.fname }} {{ current_user.lname }}.</h2>
+            <p>
+                Select an action:
+                <ul>
+                    <li><a href="{{ url_for( 'announcements' ) }}">Company announcements</a></li>
+                    <li><a href="{{ url_for( 'birthdays' ) }}">Happy birthdays</a></li>
+                    <li>#</li>
+                    <li><a href="{{ url_for( 'testing' ) }}">Tests/Quizzes</a></li>
+                    <li>#</li>
+                </ul>
+            </p>
+        {% endif %}
+        {% endblock %}

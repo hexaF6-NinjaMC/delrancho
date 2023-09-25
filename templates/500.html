@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}500 - Server Error{% endblock %}
+
+{% block h1 %}500 - An Error Most Unpleasant, It Is... <img src="{{ url_for('static', filename='assets/yoda_1233_647.webp') }}" alt="Yoda is thinking hard.">{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <p>There was an error handling your request. Please try again.</p>
+
+    {% include 'display-users.html' %}
+{% endblock %}

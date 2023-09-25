@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}404 - Not Found{% endblock %}
+
+{% block h1 %}404 - You won't find anything here...{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <p>Me thinks you are accessing the Error Pages...</p>
+
+    {% include 'display-users.html' %}
+{% endblock %}

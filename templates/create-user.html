@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Register User{% endblock %}
+
+{% block h1 %}Register{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <form method="POST" action="{{ url_for('create_user') }}">
+        {{ form.hidden_tag() }}
+
+        {{ form.fname.label(class="form-label") }}
+        {{ form.fname(class="form-control") }}
+        
+        {{ form.lname.label(class="form-label") }}
+        {{ form.lname(class="form-control") }}
+        
+        {{ form.birthday.label(class="form-label") }}
+        {{ form.birthday(class="form-control") }}
+
+        {{ form.username.label(class="form-label") }}
+        {{ form.username(class="form-control") }}
+
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+
+        {{ form.password_confirmation.label(class="form-label") }}
+        {{ form.password_confirmation(class="form-control") }}
+
+        {{ form.submitBtn() }}
+    </form>
+
+    {% include 'display-users.html' %}
+{% endblock %}

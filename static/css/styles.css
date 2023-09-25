@@ -1,0 +1,199 @@
+/* ============================= ROOT ============================= */
+:root {
+    --primary-magnolia: #fcf7ff;
+    --secondary-sapphire: #0f52ba;
+    --tertiary-tan: #b2b28d;
+    --quaternary-sea-green: #009A91;
+    --black: #211f1f;
+    
+    background-color: var(--black);
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+/* ============================= ID SELECTORS ============================= */
+
+/* ============================= CLASS SELECTORS ============================= */
+.alert {
+    width: 70vw;
+    border-radius: .25rem;
+    margin: 2rem auto;
+    color: var(--primary-magnolia);
+}
+
+div.alert>.btn-close {
+    float: right;
+}
+
+.form-control {
+    border-radius: 0.125em;
+    padding-left: .5em;
+}
+
+.form-control:invalid {
+    border: 0.125em solid red;
+}
+
+.form-control:valid {
+    border: 0.125em solid green;
+}
+
+.form-control:focus {
+    outline: none;
+    box-shadow: 0.25em 0.25em 0.25em 0.25em rgba(6, 6, 6, 0.397);
+    border: 0.125em solid var(--secondary-sapphire) !important;
+}
+
+.alert.message>.btn-close {
+    background-color: transparent;
+    border-radius: .25rem;
+    border: .025rem solid rgb(124, 128, 10);
+}
+
+.alert.success>.btn-close {
+    background-color: transparent;
+    border-radius: .25rem;
+    border: .025rem solid rgb(10, 128, 45);
+}
+
+.alert.error>.btn-close {
+    background-color: transparent;
+    border-radius: .25rem;
+    border: .025rem solid rgb(128, 24, 10);
+}
+
+.alert.message>.btn-close:hover {
+    background-color: rgba(159, 138, 4, 0.397);
+}
+
+.alert.success>.btn-close:hover {
+    background-color: rgba(63, 159, 4, 0.397);
+}
+
+.alert.error>.btn-close:hover {
+    background-color: rgba(159, 53, 4, 0.397);
+}
+
+.alert.message {
+    background-color: rgba(168, 165, 76, 0.748);
+    padding: .25rem;
+    border: .05rem solid rgb(128, 126, 10);
+}
+
+.alert.success {
+    background-color: rgba(87, 168, 76, 0.748);
+    padding: .25rem;
+    border: .05rem solid rgb(10, 128, 59);
+}
+
+.alert.error {
+    background-color: rgba(168, 87, 76, 0.748);
+    padding: .25rem;
+    border: .05rem solid rgb(128, 36, 10);
+}
+
+/* ============================= ELEMENT SELECTORS ============================= */
+nav>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav>ul>li a {
+    font-size: 1.75rem;
+    color: rgb(205, 209, 212);
+}
+
+nav>ul>li a:hover {
+    color: var(--black);
+}
+
+header>h1 {
+    color: var(--quaternary-sea-green);
+    font-size: 3.5rem;
+}
+
+footer>p {
+    margin: .25em auto;
+    color: var(--black);
+}
+
+form>input {
+    width: 50vw;
+}
+
+form>input[type="submit"] {
+    grid-column: 1 / 3;
+    margin: .25rem auto;
+    font-size: 1.5rem;
+    padding: .25rem;
+    max-width: fit-content;
+    background-color: #a4969b;
+    border: .125em solid rgb(41, 39, 39);
+    border-radius: .25rem;
+    transition: ease-in-out .25s;
+}
+
+form>input[type="submit"]:hover {
+    background-color: rgba(54, 51, 51, 0.5);
+    border: .125em solid rgb(231, 224, 224);
+    color: rgb(231, 224, 224);
+}
+
+form>label {
+    text-align: right;
+    margin-right: .5rem;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+form {
+    padding: .5rem;
+    display: grid;
+    row-gap: 2rem;
+    max-width: 90vw;
+    min-width: 80vw;
+    margin: 0 auto;
+    background-color: rgba(203, 201, 201, 0.25);
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 60vw;
+    overflow-wrap: break-word;
+}
+
+main>a:visited {
+    color: #855cff;
+}
+
+main>a:hover {
+    color: #808ad5;
+}
+
+main>a {
+    color: #a1e0eb;
+}
+
+main {
+    color: var(--primary-magnolia);
+}
+
+footer {
+    margin-top: .25rem;
+    padding: .25rem;
+}
+
+header, footer {
+    text-align: center;
+    background-color: var(--tertiary-tan);
+}
+
+html {
+    font-size: 18px;
+}

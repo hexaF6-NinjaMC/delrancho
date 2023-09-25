@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block h1 %}Login{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <form method="POST" action="{{ url_for('login') }}">
+        {{ form.hidden_tag() }}
+
+        {{ form.username.label(class="form-label") }}
+        {{ form.username(class="form-control") }}
+
+        {{ form.password.label(class="form-label") }}
+        {{ form.password(class="form-control") }}
+
+        {{ form.submitBtn() }}
+    </form>
+{% endblock %}

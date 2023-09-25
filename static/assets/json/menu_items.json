@@ -1,0 +1,433 @@
+{
+    "menu": {
+        "burgers": {
+            "hickory burger": {
+                "condiments": [
+                    "hickory sauce"
+                ]
+            },
+            "old-fashioned hamburger": {
+                "condiments": [
+                    "mustard",
+                    "onion",
+                    "pickle",
+                    "tomato"
+                ]
+            },
+            "cheeseburger": {
+                "condiments": [
+                    "mustard",
+                    "onion",
+                    "pickle",
+                    "tomato"
+                ]
+            },
+            "chili cheeseburger": {
+                "condiments": [
+                    "mustard",
+                    "onion",
+                    "pickle",
+                    "tomato"
+                ]
+            },
+            "bacon cheeseburger": {
+                "condiments": [
+                    "miracle whip",
+                    "onion",
+                    "pickle",
+                    "tomato",
+                    "lettuce"
+                ]
+            },
+            "giant frankfurter": {
+                "condiments": [
+                    "chili",
+                    "shredded cheese"
+                ]
+            },
+            "texas burger": {
+                "condiments": [
+                    "miracle whip",
+                    "onion",
+                    "relish",
+                    "tomato",
+                    "lettuce"
+                ]
+            },
+            "chuck burger": {
+                "condiments": [
+                    "chili",
+                    "cheese",
+                    "relish"
+                ]
+            }
+        },
+        "sandwiches": {
+            "steak sandwich supreme": {
+                "condiments": [
+                    "miracle whip",
+                    "lettuce",
+                    "tomato"
+                ]
+            },
+            "chicken sandwich supreme": {
+                "condiments": [
+                    "miracle whip",
+                    "lettuce",
+                    "tomato"
+                ]
+            },
+            "lil' steak sandwich supreme": {
+                "condiments": [
+                    "miracle whip",
+                    "lettuce",
+                    "tomato"
+                ]
+            },
+            "lil' chicken sandwich supreme": {
+                "condiments": [
+                    "miracle whip",
+                    "lettuce",
+                    "tomato"
+                ]
+            },
+            "bacon-lettuce-tomato": {
+                "condiments": [
+                    "bacon",
+                    "miracle whip",
+                    "lettuce",
+                    "tomato"
+                ]
+            },
+            "grilled cheese": {
+                "condiments": [
+                    "sliced cheese"
+                ]
+            }
+        },
+        "sides": [
+            "french fries",
+            "tater tots",
+            "fried okra",
+            "onion rings",
+            "corn nuggets",
+            {
+                "fried green beans": {
+                    "dressing": "ranch"
+                }
+            },
+            "green beans",
+            {
+                "chili": {
+                    "size": [
+                        "bowl",
+                        "cup"
+                    ]
+                }
+            },
+            "macaroni and cheese",
+            {
+                "mashed potatoes": {
+                    "size": [
+                        "large",
+                        "small"
+                    ]
+                }
+            },
+            "gravy",
+            "strawberry applesauce",
+            {
+                "loaded french fries": {
+                    "condiments": [
+                        "cheese",
+                        "bacon"
+                    ],
+                    "dressing": "ranch"
+                }
+            },
+            {
+                "chili cheese french fries": {
+                    "condiments": [
+                        "chili",
+                        "cheese"
+                    ]
+                }
+            },
+            {
+                "chili cheese tots": {
+                    "condiments": [
+                        "chili",
+                        "cheese"
+                    ]
+                }
+            }
+        ],
+        "favorites": [
+            {
+                "hotdog": {
+                    "condiments": [
+                        "mustard",
+                        "chili",
+                        "onion"
+                    ]
+                }
+            },
+            {
+                "frito chili pie": {
+                    "condioments": [
+                        "chili",
+                        "cheese"
+                    ]
+                }
+            },
+            "corn dog"
+        ],
+        "dinners": {
+            "steak supreme": {
+                "sides": 2,
+                "bread": "texas toast"
+            },
+            "chicken supreme": {
+                "sides": 2,
+                "bread": "texas toast"
+            },
+            "lil' steak supreme": {
+                "sides": 1,
+                "bread": "texas toast"
+            },
+            "lil' chicken supreme": {
+                "sides": 1,
+                "bread": "texas toast"
+            },
+            "hamburger steak": {
+                "sides": 2,
+                "breads": "texas toast"
+            },
+            "chicken strip": {
+                "count": 4,
+                "sides": 2,
+                "breads": "texas toast"
+            },
+            "catfish": {
+                "count": 6,
+                "sides": 2,
+                "breads": "hushpuppies"
+            },
+            "sides": [
+                "french fries",
+                "mashed potatoes",
+                "green beans",
+                "fried okra",
+                "salad",
+                "tater tots",
+                "onion rings",
+                "corn nuggets",
+                "gravy"
+            ]
+        },
+        "baskets": {
+            "chicken strip": {
+                "count": 2,
+                "sides": 1,
+                "breads": "texas toast"
+            },
+            "catfish": {
+                "count": 3,
+                "sides": 1,
+                "breads": "hushpuppies"
+            },
+            "sides": [
+                "french fries",
+                "mashed potatoes",
+                "green beans",
+                "fried okra",
+                "salad",
+                "tater tots",
+                "onion rings",
+                "corn nuggets",
+                "gravy"
+            ]
+        },
+        "lite plates": {
+            "grilled chicken": {
+                "sides": 1,
+                "bread": "texas toast"
+            },
+            "beef patty": {
+                "sides": 1,
+                "bread": "texas toast"
+            },
+            "sides": [
+                "french fries",
+                "mashed potatoes",
+                "green beans",
+                "fried okra",
+                "salad",
+                "tater tots",
+                "onion rings",
+                "corn nuggets",
+                "gravy"
+            ]
+        },
+        "salads": {
+            "classic chef": {
+                "size": [
+                    "large",
+                    "small"
+                ],
+                "meat": {
+                    "deli": [
+                        "ham",
+                        "turkey"
+                    ]
+                },
+                "condiments": [
+                    "shredded cheese",
+                    "tomato",
+                    "egg"
+                ]
+            },
+            "specialty": {
+                "size": [
+                    "large",
+                    "small"
+                ],
+                "meat": {
+                    "chicken": [
+                        "grilled",
+                        "crispy"
+                    ]
+                },
+                "condiments": [
+                    "shredded cheese",
+                    "tomato",
+                    "egg"
+                ]
+            },
+            "garden": {
+                "size": [
+                    "small"
+                ],
+                "condiments": [
+                    "shredded cheese",
+                    "tomato"
+                ]
+            }
+        },
+        "dressings": {
+            "size": [
+                "pint",
+                "large",
+                "small"
+            ],
+            "flavor": [
+                "ranch",
+                "garlic",
+                "bleu cheese",
+                "lite italian",
+                "french",
+                "honey mustard",
+                "balsamic vinaigrette",
+                "thousand isle"
+            ]
+        },
+        "kiddie": {
+            "entree": [
+                {
+                    "hotdog": {
+                        "condiments": "none"
+                    }
+                },
+                {
+                    "hamburger": {
+                        "condiments": [
+                            "mustard",
+                            "pickle",
+                            "ketchup"
+                        ]
+                    }
+                },
+                "grilled cheese",
+                "macaroni and cheese",
+                {
+                    "chicken strips": {
+                        "count": 2
+                    }
+                },
+                "corn dog"
+            ],
+            "sides": [
+                "corn nuggets",
+                "french fries",
+                "fried okra",
+                "green beans",
+                "mashed potatoes",
+                "onion rings",
+                "salad",
+                "strawberry applesauce",
+                "tater tots"
+            ],
+            "beverages": [
+                {
+                    "soft drink": [
+                        "dr pepper",
+                        "diet dr pepper",
+                        "coca-cola",
+                        "diet coke",
+                        "limeade",
+                        "cherry limeade",
+                        "sprite",
+                        "root beer",
+                        "other"
+                    ]
+                },
+                "apple juice",
+                "unsweet tea",
+                "sweet tea"
+            ]
+        },
+        "beverages": {
+            "flavor": [
+                {
+                    "soft drink": [
+                        "dr pepper",
+                        "diet dr pepper",
+                        "coca-cola",
+                        "diet coke",
+                        "limeade",
+                        "cherry limeade",
+                        "sprite",
+                        "root beer",
+                        "other"
+                    ]
+                },
+                "apple juice",
+                "unsweet tea",
+                "sweet tea",
+                "hot chocolate",
+                "coffee"
+            ],
+            "size": [
+                "kiddie",
+                "small",
+                "medium",
+                "large"
+            ]
+        },
+        "sweets": {
+            "cookies": [
+                "chocolate chip",
+                "oatmeal raisin",
+                "peanut butter"
+            ],
+            "sliced cakes": [
+                "lemon italian-creme",
+                "red velvet"
+            ],
+            "loaf cakes": [
+                "chocolate banana swirl",
+                "iced lemon"
+            ]
+        }
+    }
+}

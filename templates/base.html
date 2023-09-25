@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Aaron Bechtel">
+        <meta name="description" content="{% block metacontent %}{% endblock %}">
+        <link rel="stylesheet" href="{{ url_for( 'static', filename='css/styles.css' ) }}">
+        <link rel="icon" href="{{ url_for( 'static', filename='assets/favicon_io/favicon.ico' ) }}">
+    </head>
+
+    <body>
+        <header>
+            {% include 'navbar.html' %}
+            {% block header %}
+                <h1>{% block h1 %}{% endblock %}</h1>
+            {% endblock %}
+        </header>
+
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+
+        {% include 'footer.html' %}
+    </body>
+</html>

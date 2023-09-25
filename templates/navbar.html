@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+        {% else %}
+        <li><a href="{{ url_for('create_user') }}">Register</a></li>
+        <li><a href="{{ url_for('login') }}">Login</a></li>
+        {% endif %}
+    </ul>
+</nav>

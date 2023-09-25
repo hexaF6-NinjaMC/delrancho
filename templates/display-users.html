@@ -1,0 +1,12 @@
+<table>
+    <tbody>
+    {% if current_user.is_authenticated and current_user.id == 1 %}
+        <tr><td>User ID: {{ current_user.id }} | Administrator: {{ current_user.fname }} {{ current_user.lname }}</td></tr>
+        {% for user in users %}
+        {% if user.id != 1 %}
+        <tr><td>User ID: {{ user.id }} | {{ user.fname }} {{ user.lname }} | <a href="{{ url_for( 'delete', id=user.id ) }}">Delete</a></td></tr>
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block h1 %}Dashboard{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <p>This is your dashboard.</p>
+    <a href="{{ url_for('logout') }}">Logout</a>
+
+    {% include 'display-users.html' %}
+{% endblock %}

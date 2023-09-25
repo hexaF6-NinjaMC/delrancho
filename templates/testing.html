@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Testing{% endblock %}
+
+{% block h1 %}Tests & Quizzes{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <ul id="menu">
+    </ul>
+    <script src="{{ url_for( 'static', filename='js/getMenu.js' ) }}"></script>
+
+    {% include 'display-users.html' %}
+{% endblock %}
