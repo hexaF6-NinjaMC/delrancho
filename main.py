@@ -1,6 +1,6 @@
 import os, json
 from datetime import datetime
-from flask import Flask, render_template, flash, redirect, url_for
+from flask import Flask, render_template, flash, redirect, url_for, abort
 from helper.Forms import CreateUserForm, LoginForm
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -74,9 +74,10 @@ def testing():
 
 # Delete database records
 @app.route('/delete/<int:id>')
+@login_required
 def delete(id):
     user_to_delete = Users.query.get_or_404(id)
-    if (current_user.id == 1):
+    if (current_user.get_id() == 1):
         if (user_to_delete.id != 1):
             try:
                 database.session.delete(user_to_delete)
