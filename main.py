@@ -6,7 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user
-from itsdangerous import URLSafeTimedSerializer
 
 # ==============---------------SETUP---------------==============
 # # Create the Flask Application
@@ -26,8 +25,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
     # Get a Secret Key
 app.config['SECRET_KEY'] = os.environ.get('LOGIN_SECRET')
 skey = app.config['SECRET_KEY']
-
-s = URLSafeTimedSerializer(skey)
 
 # Initialize the database
 database = SQLAlchemy(app)
