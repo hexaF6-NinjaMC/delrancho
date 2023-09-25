@@ -188,7 +188,7 @@ def server_error(e):
     return render_template('500.html'), 500
 
 # Permission Request Denied
-@app.error_handler(403)
+@app.errorhandler(403)
 def access_denied(e):
     flash("You are not authorized to perform this action.", category="error")
     return render_template('403.html'), 403
