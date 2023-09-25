@@ -50,7 +50,8 @@ def main():
 @app.route("/announcements")
 @login_required
 def announcements():
-    return render_template('announcements.html', date=datetime.today().date().strftime('%m-%d-%Y'))
+    all_reg_users = Users.query.order_by(Users.date_added)
+    return render_template('announcements.html', date=datetime.today().date().strftime('%m-%d-%Y'), users=all_reg_users)
 
 # Birthdays
 @app.route("/birthdays")
@@ -64,11 +65,12 @@ def birthdays():
 @app.route("/testing")
 @login_required
 def testing():
+    all_reg_users = Users.query.order_by(Users.date_added)
     with open('./static/assets/json/menu_items.json', 'r') as menu_file_json:
         menu_file = []
         load_file = json.load(menu_file_json)
         menu_file.append(load_file['menu'])
-    return render_template('testing.html')
+    return render_template('testing.html', users=all_reg_users)
 
 # Delete database records
 @app.route('/delete/<int:id>')
