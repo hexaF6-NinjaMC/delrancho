@@ -79,13 +79,13 @@ def delete(id):
     if (current_user.id == 1):
         if (user_to_delete.id != 1):
             try:
-	        	database.session.delete(user_to_delete)
-	        	database.session.commit()
-	        	flash("User deleted successfully.", category="success")
+                database.session.delete(user_to_delete)
+                database.session.commit()
+                flash("User deleted successfully.", category="success")
             except:
-	        	flash("Whoops! There was an error deleting the user, try again.", category="error")
+                flash("Whoops! There was an error deleting the user, try again.", category="error")
         else:
-	    	flash("You can't delete the administrator!", category="error")
+            flash("You can't delete the administrator!", category="error")
     else:
         abort(403)
 
