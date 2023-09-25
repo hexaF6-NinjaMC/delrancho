@@ -76,14 +76,19 @@ def testing():
 @app.route('/delete/<int:id>')
 def delete(id):
     user_to_delete = Users.query.get_or_404(id)
-
-    try:
-        database.session.delete(user_to_delete)
-        database.session.commit()
-        flash("User deleted successfully.", category="success")
-        
-    except:
-        flash("Whoops! There was an error deleting the user, try again.", category="error")
+	if (current_user.id == 1):
+	    if (user_to_delete.id != 1):
+	        try:
+	            database.session.delete(user_to_delete)
+	            database.session.commit()
+	            flash("User deleted successfully.", category="success")
+	        
+	        except:
+	            flash("Whoops! There was an error deleting the user, try again.", category="error")
+	    else:
+		flash("You can't delete the administrator!", category="error")
+	else:
+	    abort(403)
 
     return redirect(url_for('dashboard'))
 
@@ -182,6 +187,12 @@ def page_not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return render_template('500.html'), 500
+
+# Permission Request Denied
+@app.error_handler(403)
+def access_denied(e):
+    flash("You are not authorized to perform this action.", category="error")
+    return render_template('403.html'), 403
 
 class Users(database.Model, UserMixin):
     id = database.Column(database.Integer, primary_key=True)
