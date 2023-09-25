@@ -77,7 +77,8 @@ def testing():
 @login_required
 def delete(id):
     user_to_delete = Users.query.get_or_404(id)
-    if (current_user.get_id() == 1):
+    print(f'ID: {current_user.get_id}')
+    if (current_user.get_id == 1):
         if (user_to_delete.id != 1):
             try:
                 database.session.delete(user_to_delete)
@@ -181,18 +182,21 @@ def logout():
 # Invalid URL
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    all_reg_users = Users.query.order_by(Users.date_added)
+    return render_template('404.html', users=all_reg_users), 404
 
 # Internal Server Error
 @app.errorhandler(500)
 def server_error(e):
-    return render_template('500.html'), 500
+    all_reg_users = Users.query.order_by(Users.date_added)
+    return render_template('500.html', users=all_reg_users), 500
 
 # Permission Request Denied
 @app.errorhandler(403)
 def access_denied(e):
+    all_reg_users = Users.query.order_by(Users.date_added)
     flash("You are not authorized to perform this action.", category="error")
-    return render_template('403.html'), 403
+    return render_template('403.html', users=all_reg_users), 403
 
 class Users(database.Model, UserMixin):
     id = database.Column(database.Integer, primary_key=True)
