@@ -13,19 +13,19 @@ from itsdangerous import URLSafeTimedSerializer
 app = Flask(__name__)
 # Get configs
 
-    # Fakes
-    # Add Database
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-    # Get a Secret Key
-app.config['SECRET_KEY'] = 'del_rancho_secret'
-skey = app.config['SECRET_KEY']
-
-#     # Legits
+#     # Fakes
 #     # Add Database
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 #     # Get a Secret Key
-# app.config['SECRET_KEY'] = os.environ.get('LOGIN_SECRET')
+# app.config['SECRET_KEY'] = 'del_rancho_secret'
 # skey = app.config['SECRET_KEY']
+
+    # Legits
+    # Add Database
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+    # Get a Secret Key
+app.config['SECRET_KEY'] = os.environ.get('LOGIN_SECRET')
+skey = app.config['SECRET_KEY']
 
 s = URLSafeTimedSerializer(skey)
 
@@ -209,8 +209,8 @@ class Users(database.Model, UserMixin):
 # ==============---------------MAIN EXECUTION---------------==============
 # The MAIN way to run the Flask app
 if __name__ == "__main__":
-	# app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+	app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
 
     # OR
 
-	app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+	# app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
