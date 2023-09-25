@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}403 - Access Denied!{% endblock %}
+
+{% block h1 %}403 - Access Denied{% endblock %}
+{% block main %}
+    {% include 'flash-messages.html' %}
+
+    <p>403 - You don't have permission to perform that action!</p>
+    <p>If you believe this was a mistake, please contact the Adminstrator.</p>
+
+    {% include 'display-users.html' %}
+{% endblock %}
