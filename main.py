@@ -78,7 +78,7 @@ def testing():
 def delete(id):
     user_to_delete = Users.query.get_or_404(id)
     print('ID: ', current_user.get_id())
-    if (current_user.get_id == 1):
+    if (current_user.get_id() == 1):
         if (user_to_delete.id != 1):
             try:
                 database.session.delete(user_to_delete)
