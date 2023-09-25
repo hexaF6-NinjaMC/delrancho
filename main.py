@@ -5,7 +5,7 @@ from helper.Forms import CreateUserForm, LoginForm
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user
+from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
 
 # ==============---------------SETUP---------------==============
 # # Create the Flask Application
